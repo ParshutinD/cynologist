@@ -1,0 +1,25 @@
+.btn {
+  display: block;
+  max-width: 282px;
+  background-color: $color_primary;
+  color: $color_white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  @include fonts_main;
+  border: none;
+  padding: 12px 40px 10px 40px;
+  text-align: center;
+  box-shadow: 4px 4px 20px rgba(9, 3, 93, 0.1);
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $color_secondary;
+  }
+
+  &:active {
+    background-color: $color_third;
+  }
+}

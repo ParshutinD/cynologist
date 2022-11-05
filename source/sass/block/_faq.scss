@@ -1,0 +1,46 @@
+.faq__title {
+  padding-top: 80px;
+}
+
+.faq__list {
+  max-width: 802px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  position: relative;
+}
+
+.faq__button {
+  border: none;
+  border-left: 2px solid $color_third;
+  border-bottom: 2px solid $color_third;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+  transition: 0.3s;
+  transform: rotate(-45deg);
+
+  &--open {
+    transform: rotate(135deg);
+    transition: 0.3s;
+  }
+}
+
+.faq__item-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  padding-bottom: 20px;
+  color: $color_third;
+}
+
+.faq__item-discription {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}

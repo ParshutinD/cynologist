@@ -1,0 +1,43 @@
+.reasons__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include xs-block {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.reasons__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: -4px -4px 20px rgba(120, 113, 222, 0.1),
+    4px 4px 20px rgba(120, 113, 222, 0.1);
+  border-radius: 4px;
+  padding: 20px 20px 28px 20px;
+  cursor: pointer;
+
+  @include sm-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  &:hover {
+    box-shadow: -4px -4px 20px rgba(120, 113, 222, 0.2),
+      4px 4px 20px rgba(120, 113, 222, 0.2);
+
+    svg path {
+      fill: #000000;
+    }
+    svg rect {
+      fill: #000000;
+    }
+  }
+}
+
+.reasons__discription {
+  max-width: 158px;
+}

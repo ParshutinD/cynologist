@@ -1,0 +1,46 @@
+.about-us {
+  .container {
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.about-us__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include lg-block {
+    gap: 20px;
+  }
+  @include sm-block {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include xs-block {
+  }
+}
+
+.about-us__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+  color: $color_primary;
+  padding-bottom: 10px;
+}
+
+.about-us__discription {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.about-us__item {
+  max-width: 200px;
+}

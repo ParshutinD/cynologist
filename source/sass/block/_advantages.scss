@@ -1,0 +1,38 @@
+.advantages {
+  background-color: $color_secondary;
+}
+
+.advantages__title {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  color: $color_white;
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 0.64fr;
+  max-width: 1010px;
+  margin: 0 auto;
+  gap: 30px;
+
+  @include xs-block {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.advantages__item-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: $color_green;
+  padding-bottom: 12px;
+}
+
+.advantages__discription {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color_white;
+}
