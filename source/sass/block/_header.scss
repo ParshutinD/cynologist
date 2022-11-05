@@ -16,7 +16,8 @@
   gap: 20px;
 
   @include lg-block {
-    display: none;
+    flex-direction: column;
+    color: $color_white;
   }
 }
 
@@ -26,10 +27,17 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
- 
 
   &:hover {
     color: $color_secondary;
+  }
+
+  @include lg-block {
+    color: $color_white;
+
+    &:hover {
+      color: $color_primary;
+    }
   }
 }
 
@@ -39,7 +47,6 @@
   gap: 4px;
 
   @include lg-block {
-    display: none;
   }
 }
 
@@ -51,4 +58,75 @@
   width: 24px;
   height: 24px;
   border-radius: 4px;
+}
+
+.header__btn {
+  display: none;
+
+  @include lg-block {
+    display: block;
+    border: none;
+    width: 30px;
+    height: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & span {
+      width: 22px;
+      height: 2px;
+      background-color: $color_secondary;
+    }
+  }
+}
+
+.header__wrapper {
+  display: none;
+  display: flex;
+  gap: 40px;
+  position: relative;
+
+  @include lg-block {
+    background: rgba(120, 113, 222, 0.8);
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100%;
+    top: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.header__btn-closed {
+  display: none;
+  position: absolute;
+  @include lg-block {
+    display: block;
+    border: none;
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -110px;
+      width: 24px;
+      height: 1.5px;
+      background-color: $color_white;
+      cursor: pointer;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
 }
