@@ -22,14 +22,10 @@
       "item3 item2 item2";
   }
 
-  @include xs-block {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-
-    grid-template-areas:
-      "item1 item1 item1"
-      "item2 item2 item2"
-      "item3 item3 item3";
+  @include sm-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 }
 
@@ -67,7 +63,7 @@
 
 .choose-us__discription {
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 18px;
   line-height: 27px;
 
@@ -82,6 +78,7 @@
 
   span {
     color: $color_secondary;
+    @include fonts_title;
   }
 
   &.choose-us__discription--purple {

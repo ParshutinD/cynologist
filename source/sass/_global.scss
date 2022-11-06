@@ -88,6 +88,10 @@ html::-webkit-scrollbar-track {
 
 section {
   padding-bottom: 80px;
+
+  @include sm-block {
+    padding-bottom: 60px;
+  }
 }
 
 .visually-hidden {

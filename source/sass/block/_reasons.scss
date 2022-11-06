@@ -3,7 +3,10 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 
-  @include xs-block {
+  @include lg-block {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include sm-block {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -23,16 +26,15 @@
     flex-direction: column;
   }
 
-
+  svg {
+    fill: $color_green;
+  }
 
   &:hover {
     box-shadow: -4px -4px 20px rgba(120, 113, 222, 0.2),
       4px 4px 20px rgba(120, 113, 222, 0.2);
 
-    svg path {
-      fill: #000000;
-    }
-    svg rect {
+    svg {
       fill: #000000;
     }
   }
