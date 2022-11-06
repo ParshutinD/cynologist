@@ -116,4 +116,9 @@ section {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   @include fonts_main;
+
+  &.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
 }

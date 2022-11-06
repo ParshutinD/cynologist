@@ -109,15 +109,13 @@
     &.active {
       background: transparent;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       transition: 0.3;
       z-index: 2;
 
       span:nth-child(1) {
         transform: rotate(45deg);
         background-color: $color_white;
+        position: absolute;
       }
 
       span:nth-child(2) {
@@ -147,12 +145,15 @@
     bottom: 0;
     right: 0;
     left: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     display: none;
+
+    &.active {
+      display: flex;
+    }
   }
 }

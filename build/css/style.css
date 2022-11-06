@@ -107,6 +107,9 @@ section {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   font-family: "Post No Bills Colombo", "Tahoma", sans-serif; }
+  .page-body.no-scroll {
+    overflow: hidden;
+    height: 100vh; }
 
 .btn {
   display: block;
@@ -213,14 +216,12 @@ section {
       .header__btn.active {
         background: transparent;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: 0.3;
         z-index: 2; }
         .header__btn.active span:nth-child(1) {
           transform: rotate(45deg);
-          background-color: #ffffff; }
+          background-color: #ffffff;
+          position: absolute; }
         .header__btn.active span:nth-child(2) {
           display: none; }
         .header__btn.active span:nth-child(3) {
@@ -247,7 +248,9 @@ section {
       justify-content: center;
       align-items: center;
       text-align: center;
-      display: none; } }
+      display: none; }
+      .header__menu.active {
+        display: flex; } }
 
 .about-us .container {
   padding-top: 90px;
@@ -498,7 +501,8 @@ section {
     justify-content: center;
     align-items: center;
     gap: 134px;
-    max-width: 802px; }
+    max-width: 802px;
+    width: 100%; }
     @media (max-width: 767px) {
       .feedback-form form {
         flex-direction: column;
@@ -508,13 +512,15 @@ section {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  max-width: 386px; }
+  max-width: 386px;
+  width: 100%; }
 
 .feedback-form__input {
   border: 1px solid #09035d;
   border-radius: 4px;
   background-color: #ffffff;
-  padding: 20px 200px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -525,6 +531,8 @@ section {
     border: 1px solid #9fdb3d;
     border-radius: 4px;
     color: #000000; }
+    .feedback-form__input:focus::placeholder {
+      opacity: 0; }
 
 .feedback-form__check {
   display: flex; }
@@ -546,6 +554,28 @@ section {
         line-height: 21px; } }
     .feedback-form__check label a {
       color: #9fdb3d; }
+
+.feedback-form__check {
+  position: relative; }
+  .feedback-form__check input {
+    opacity: 0; }
+    .feedback-form__check input + label::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      position: absolute;
+      left: 0px;
+      top: 5px;
+      cursor: pointer; }
+    .feedback-form__check input:checked + label::after {
+      content: url(../img/mark.svg);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 5px;
+      left: 0px; }
 
 .feedback__title {
   padding-top: 80px; }

@@ -11,3 +11,13 @@ for (let i = 0; i < acc.length; i++) {
     }
   });
 }
+
+const burger = document.querySelector(".header__btn");
+const burgerMenu = document.querySelector(".header__menu");
+const body = document.querySelector(".page-body");
+
+burger.addEventListener("click", function () {
+  this.classList.toggle("active");
+  burgerMenu.classList.toggle("active");
+  body.classList.toggle("no-scroll");
+});

@@ -12,6 +12,7 @@
     align-items: center;
     gap: 134px;
     max-width: 802px;
+    width: 100%;
 
     @include sm-block {
       flex-direction: column;
@@ -25,13 +26,15 @@
   flex-direction: column;
   gap: 10px;
   max-width: 386px;
+  width: 100%;
 }
 
 .feedback-form__input {
   border: 1px solid #09035d;
   border-radius: 4px;
   background-color: $color_white;
-  padding: 20px 200px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -45,6 +48,10 @@
     border: 1px solid #9fdb3d;
     border-radius: 4px;
     color: $color_black;
+
+    &::placeholder {
+      opacity: 0;
+    }
   }
 }
 
@@ -53,8 +60,6 @@
 
   @include sm-block {
     align-items: center;
-
-  
   }
   input {
     width: 30px;
@@ -74,6 +79,35 @@
 
     a {
       color: $color_green;
+    }
+  }
+}
+
+.feedback-form__check {
+  position: relative;
+
+  input {
+    opacity: 0;
+
+   + label::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-color: $color_white;
+      border-radius: 4px;
+      position: absolute;
+      left: 0px;
+      top: 5px;
+      cursor: pointer;
+    }
+
+    &:checked + label::after {
+      content: url(../img/mark.svg);
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 5px;
+      left: 0px;
     }
   }
 }
