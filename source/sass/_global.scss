@@ -35,6 +35,11 @@ h1 {
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+
+  @include sm-block {
+    font-size: 30px;
+    line-height: 100.02%;
+  }
 }
 
 h2 {

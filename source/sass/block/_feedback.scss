@@ -54,6 +54,11 @@
   font-size: 18px;
   line-height: 27px;
   padding-bottom: 20px;
+
+  @include sm-block {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 .feedback__author {
